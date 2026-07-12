@@ -14,7 +14,8 @@ BTC: bc1qn4ekqs9nj3er48hcadvtegy7525h66z9wk3zx2
 
 SOL: BH3EZzNk18LvjcAkDs16ET8egcKXNHULSsR13CHyaAUA
 
-![Uploading изображение.png…]()
+<img width="1012" height="612" alt="изображение" src="https://github.com/user-attachments/assets/3ddb00e9-30b6-4d1c-b89e-c5457af580a9" />
+
 
 
 
