@@ -58,7 +58,7 @@
             this.MinimizeBox = false;
             this.Name = "FormGPU";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Проверка нагрузки GPU";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.FormGPU_Load);

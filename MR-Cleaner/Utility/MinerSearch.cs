@@ -71,10 +71,9 @@ namespace MR_Cleaner.Utility
 
             FoundMiners.Clear();
             FoundSuspicious.Clear();
-            FoundMiners.AddRange(_minersBag);
-            FoundSuspicious.AddRange(_suspBag);
+            FoundMiners.AddRange(_minersBag.Distinct(StringComparer.OrdinalIgnoreCase).OrderBy(x => x));
+            FoundSuspicious.AddRange(_suspBag.Distinct(StringComparer.OrdinalIgnoreCase).OrderBy(x => x));
 
-            SaveReportToDesktop();
         }
 
         private void ScanProcesses()
@@ -251,15 +250,6 @@ namespace MR_Cleaner.Utility
                 }
             }
             catch { return null; }
-        }
-
-        private void SaveReportToDesktop()
-        {
-            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            string fileName = $"MetroMinerSearch_{DateTime.Now:dd-MM-yyyy_HH-mm}.txt";
-            string fullPath = Path.Combine(desktop, fileName);
-
-            File.WriteAllText(fullPath, GetReport(), Encoding.UTF8);
         }
 
         public string GetReport()

@@ -238,7 +238,17 @@ namespace MR_Cleaner.Utility
                 MaxDegreeOfParallelism = Math.Max(1, Environment.ProcessorCount)
             };
 
-            Parallel.ForEach(processes, options, p => AnalyzeProcess(p, removeThreats, intensiveMode));
+            Parallel.ForEach(processes, options, p =>
+            {
+                try
+                {
+                    AnalyzeProcess(p, removeThreats, intensiveMode);
+                }
+                finally
+                {
+                    p.Dispose();
+                }
+            });
 
             Threats.Clear();
             Log.Clear();
@@ -264,12 +274,6 @@ namespace MR_Cleaner.Utility
                 CheckParentProcess(process, suspicions);
                 CheckNetworkActivity(process, suspicions);
 
-                if (intensiveMode)
-                {
-                    CheckRunPE(process, suspicions);
-                    CheckSuspiciousMemory(process, suspicions);
-                }
-
                 if (suspicions.Count == 0) return;
 
                 string msg = $"[THREAT] PID={process.Id} | {process.ProcessName} | {string.Join("; ", suspicions)}";
@@ -288,10 +292,6 @@ namespace MR_Cleaner.Utility
                 }
             }
             catch { }
-            finally
-            {
-                try { process.Dispose(); } catch { }
-            }
         }
 
         private static bool IsSelf(Process p)

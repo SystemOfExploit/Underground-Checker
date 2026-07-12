@@ -40,7 +40,7 @@
             this.metroComboBox1.Location = new System.Drawing.Point(105, 93);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(181, 29);
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroComboBox1.TabIndex = 2;
             this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroComboBox1.UseSelectable = true;
@@ -67,7 +67,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMBR";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Восстановить MBR";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.FormMBR_Load);

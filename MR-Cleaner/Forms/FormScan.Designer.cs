@@ -25,7 +25,7 @@
             this.metroButton1.Location = new System.Drawing.Point(23, 108);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(391, 37);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroButton1.TabIndex = 0;
             this.metroButton1.Text = "Сканировать";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -37,7 +37,7 @@
             this.metroProgressBar1.Location = new System.Drawing.Point(23, 65);
             this.metroProgressBar1.Name = "metroProgressBar1";
             this.metroProgressBar1.Size = new System.Drawing.Size(391, 37);
-            this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroProgressBar1.TabIndex = 1;
             this.metroProgressBar1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -51,7 +51,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormScan";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Сканер ПК";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ResumeLayout(false);

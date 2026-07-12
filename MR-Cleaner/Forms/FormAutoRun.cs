@@ -26,7 +26,7 @@ namespace MR_Cleaner.Forms
         }
 
         private List<AutoRunEntry> entries = new List<AutoRunEntry>();
-        Color selectColor = Color.FromArgb(200, 30, 30);
+        private static readonly Color SelectionColor = Color.FromArgb(0, 128, 128);
 
         public FormAutoRun()
         {
@@ -66,7 +66,7 @@ namespace MR_Cleaner.Forms
             bool selected = e.Item.Selected;
 
             if (selected)
-                e.Graphics.FillRectangle(new SolidBrush(selectColor), r);
+                e.Graphics.FillRectangle(new SolidBrush(SelectionColor), r);
             else
                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(17, 17, 17)), r);
 

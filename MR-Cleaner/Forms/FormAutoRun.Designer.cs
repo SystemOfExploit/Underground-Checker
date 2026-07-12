@@ -55,7 +55,7 @@
             this.autoRunList.Name = "autoRunList";
             this.autoRunList.OwnerDraw = true;
             this.autoRunList.Size = new System.Drawing.Size(1374, 698);
-            this.autoRunList.Style = MetroFramework.MetroColorStyle.Red;
+            this.autoRunList.Style = MetroFramework.MetroColorStyle.Teal;
             this.autoRunList.TabIndex = 1;
             this.autoRunList.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.autoRunList.UseCompatibleStateImageBehavior = false;
@@ -117,7 +117,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAutoRun";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Автозагрузка";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.FormAutoRun_Load);

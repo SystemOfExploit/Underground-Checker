@@ -38,7 +38,7 @@
             this.metroListView1.Name = "metroListView1";
             this.metroListView1.OwnerDraw = true;
             this.metroListView1.Size = new System.Drawing.Size(788, 487);
-            this.metroListView1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroListView1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroListView1.TabIndex = 1;
             this.metroListView1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroListView1.UseCompatibleStateImageBehavior = false;
@@ -67,7 +67,7 @@
             this.Controls.Add(this.metroListView1);
             this.Name = "FormNetstat";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Сетевые подключения";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.contextMenuStrip1.ResumeLayout(false);

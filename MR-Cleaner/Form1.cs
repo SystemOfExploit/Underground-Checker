@@ -343,11 +343,10 @@ namespace MR_Cleaner
                 DialogResult confirmResult = MetroFramework.MetroMessageBox.Show(
                     this,
                     "Запустить сканирование процессов?\n\n" +
-                    "Поиск троянов в запущенных процессах\n" +
-                    "Обнаружение RunPE и прочего\n" +
-                    "Анализ оперативной памяти\n" +
-                    "Проверка сетевых соединений\n\n",
-                    "VCleaner - RunPE Scanner",
+                    "Проверка имени, пути и родительского процесса\n" +
+                    "Проверка сетевых соединений\n" +
+                    "Без чтения памяти и завершения процессов\n\n",
+                    "VCleaner",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
 
@@ -357,27 +356,16 @@ namespace MR_Cleaner
                     return;
                 }
 
-                DialogResult modeResult = MetroFramework.MetroMessageBox.Show(
-                    this,
-                    "Выберите режим сканирования:\n\n" +
-                    "Intensive — интенсивная проверка\n" +
-                    "Normal — экономный режим\n",
-                    "Режим сканирования",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-                bool intensiveMode = modeResult == DialogResult.Yes;
-
                 MetroFramework.MetroMessageBox.Show(
                     this,
-                    $"Сканирование процессов...\nРежим: {(intensiveMode ? "Intensive" : "Normal")}",
+                    "Сканирование процессов...\nРежим: безопасный",
                     "VCleaner",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                 VCleaner scanner = new VCleaner();
 
-                await Task.Run(() => scanner.ScanProcessesOnly(removeThreats: true, intensiveMode: intensiveMode));
+                await Task.Run(() => scanner.ScanProcessesOnly(removeThreats: false, intensiveMode: false));
 
                 string report = scanner.GetSummary();
 

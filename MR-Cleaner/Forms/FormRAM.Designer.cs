@@ -70,7 +70,7 @@
             this.cleanButton.Location = new System.Drawing.Point(23, 170);
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(160, 32);
-            this.cleanButton.Style = MetroFramework.MetroColorStyle.Red;
+            this.cleanButton.Style = MetroFramework.MetroColorStyle.Teal;
             this.cleanButton.TabIndex = 3;
             this.cleanButton.Text = "Очистить";
             this.cleanButton.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 225);
+            this.ClientSize = new System.Drawing.Size(358, 225);
             this.Controls.Add(this.cleanButton);
             this.Controls.Add(this.totalMbLabel);
             this.Controls.Add(this.usedMbLabel);
@@ -92,7 +92,7 @@
             this.Name = "FormRAM";
             this.Opacity = 0.9D;
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Проверка нагрузки ОЗУ";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.FormRAM_Load);

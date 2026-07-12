@@ -130,36 +130,10 @@ namespace MR_Cleaner.Utility
 
             ReadMemorySnapshot(out _usedBeforeMb, out _availableBeforeMb);
 
-            IntPtr token = IntPtr.Zero;
-            try
-            {
-                token = OpenPrivileges();
-                if (token != IntPtr.Zero)
-                {
-                    EnablePrivilege(token, "SeDebugPrivilege");
-                    EnablePrivilege(token, "SeIncreaseQuotaPrivilege");
-                    EnablePrivilege(token, "SeProfileSingleProcessPrivilege");
-                }
-
-                ForceGarbageCollection();
-
-                TrimAllProcesses(includeSystem, 2);
-
-                ForceGarbageCollection();
-
-                if (cleanFileCache)
-                    TryCleanFileCache();
-
-                TryPurgeMemoryLists(2);
-
-                ForceGarbageCollection();
-                TrimCurrentProcess();
-            }
-            finally
-            {
-                if (token != IntPtr.Zero)
-                    CloseHandle(token);
-            }
+            ForceGarbageCollection();
+            TrimAllProcesses(includeSystem, 1);
+            ForceGarbageCollection();
+            TrimCurrentProcess();
 
             ReadMemorySnapshot(out _usedAfterMb, out _availableAfterMb);
         }

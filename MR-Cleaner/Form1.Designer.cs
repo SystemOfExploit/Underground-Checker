@@ -623,9 +623,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(810, 422);
+            this.pictureBox1.Location = new System.Drawing.Point(816, 422);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 170);
+            this.pictureBox1.Size = new System.Drawing.Size(173, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
@@ -692,8 +692,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
-            this.Text = "MetroChecker | Reload";
+            this.Style = MetroFramework.MetroColorStyle.Teal;
+            this.Text = "Underground Checker | Rework";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

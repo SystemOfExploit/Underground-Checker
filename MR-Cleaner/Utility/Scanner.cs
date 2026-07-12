@@ -702,12 +702,15 @@ internal class Scanner
     {
         try
         {
-            ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher("root\\Microsoft\\Windows\\Defender", "SELECT * FROM MSFT_MpThreatDetection");
-            string[] array = (from ManagementObject m in managementObjectSearcher.Get()
-                              select m["ThreatName"]?.ToString() into s
-                              where !string.IsNullOrWhiteSpace(s)
-                              select s).Distinct().ToArray();
-            return array.Length == 0 ? Array.Empty<string>() : array;
+            using (var managementObjectSearcher = new ManagementObjectSearcher("root\\Microsoft\\Windows\\Defender", "SELECT * FROM MSFT_MpThreatDetection"))
+            using (ManagementObjectCollection results = managementObjectSearcher.Get())
+            {
+                string[] array = (from ManagementObject m in results
+                                  select m["ThreatName"]?.ToString() into s
+                                  where !string.IsNullOrWhiteSpace(s)
+                                  select s).Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
+                return array.Length == 0 ? Array.Empty<string>() : array;
+            }
         }
         catch
         {

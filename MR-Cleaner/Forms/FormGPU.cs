@@ -89,7 +89,7 @@ namespace MR_Cleaner.Forms
                         label.Height = 24;
                         label.Location = new Point(10, y);
                         label.Theme = MetroFramework.MetroThemeStyle.Dark;
-                        label.Style = MetroFramework.MetroColorStyle.Red;
+                        label.Style = MetroFramework.MetroColorStyle.Teal;
                         label.Text = $"{BuildDisplayName(instance, index)}: 0%";
                         label.UseStyleColors = true;
 

@@ -47,11 +47,12 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(105, 427);
+            this.metroLabel1.Location = new System.Drawing.Point(89, 427);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(177, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(216, 19);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "https://github.com/Fluder512";
+            this.metroLabel1.Text = "https://github.com/SystemOfExploit";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
@@ -65,7 +66,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAbout";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Автор";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

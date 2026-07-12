@@ -46,26 +46,20 @@ namespace MR_Cleaner.Forms
 
                 BotKiller.Execute();
 
-                _vCleaner.ScanProcessesOnly(removeThreats: true, intensiveMode: true);
+                _vCleaner.ScanProcessesOnly(removeThreats: false, intensiveMode: false);
 
                 _minerSearch.Scan();
 
-                string winDir = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
                 string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                string systemRoot = Environment.GetEnvironmentVariable("SystemRoot") ?? winDir;
 
                 string[] folders =
                 {
                     Path.GetTempPath(),
-                    Path.Combine(winDir, "Temp"),
-                    Path.Combine(winDir, "Prefetch"),
-                    Path.Combine(winDir, "SoftwareDistribution", "Download"),
                     Path.Combine(localAppData, "Temp"),
                     Path.Combine(localAppData, "Microsoft", "Windows", "INetCache"),
                     Path.Combine(localAppData, "Microsoft", "Windows", "Temporary Internet Files"),
                     Path.Combine(localAppData, "Microsoft", "Windows", "WER"),
-                    Path.Combine(localAppData, "CrashDumps"),
-                    Path.Combine(systemRoot, "Logs"),
+                    Path.Combine(localAppData, "CrashDumps")
                 };
 
                 Parallel.ForEach(folders, folder =>
@@ -104,7 +98,7 @@ namespace MR_Cleaner.Forms
                     }
                 });
 
-                _memReduct.CleanMemory(includeSystem: false, cleanFileCache: true);
+                _memReduct.CleanMemory(includeSystem: false, cleanFileCache: false);
             });
 
             _progressCts.Cancel();

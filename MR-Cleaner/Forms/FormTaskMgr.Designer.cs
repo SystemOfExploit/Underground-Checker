@@ -111,7 +111,7 @@
             this.metroTextBoxSearch.SelectionStart = 0;
             this.metroTextBoxSearch.ShortcutsEnabled = true;
             this.metroTextBoxSearch.Size = new System.Drawing.Size(618, 23);
-            this.metroTextBoxSearch.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTextBoxSearch.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTextBoxSearch.TabIndex = 1;
             this.metroTextBoxSearch.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxSearch.UseSelectable = true;
@@ -128,7 +128,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTaskMgr";
             this.Opacity = 0.9D;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Диспетчер задач";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.contextMenuStrip1.ResumeLayout(false);
